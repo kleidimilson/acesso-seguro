@@ -11,7 +11,7 @@ import axios from 'axios';
 
 import './styles.css';
 
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
 
 // array ou objeto: manualemnte informar o tipo da variavel
 interface Item {

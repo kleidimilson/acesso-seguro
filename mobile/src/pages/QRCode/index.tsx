@@ -9,7 +9,7 @@ const QRCode = () => {
   useEffect(() => {
     (async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
-      setHasPermission(status === 'granted');
+      setHasPermission(status === 'true');
     })();
   }, []);
 
