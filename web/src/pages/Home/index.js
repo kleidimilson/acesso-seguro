@@ -4,8 +4,11 @@ import {FaPrint} from 'react-icons/fa';
 import './styles.css';
 import QRCode from 'qrcode.react';
 
+
+
 const Home = () => {
   const [funcionarios, setFuncionarios] = useState([]);
+ 
   useEffect(() => {
     async function loadFuncionarios(){
       const response = await api.get('/users');
@@ -24,12 +27,17 @@ const Home = () => {
     loadFuncionarios();
 
   },[]);
+ 
   return (
     <div id="page-home">
       <div className="content">
       
         <main>
-          <button><FaPrint />Imprimir</button>
+          <div className="impressao">
+             <button  onClick={() => window.print()}><FaPrint />Imprimir</button>
+          </div>
+         
+         
         {funcionarios.map(funcio => (
             <ul>
               <li className="item" >
